@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <h1 class="mb-3">ToDoApp</h1>
+      <div id="newtask" data-bs-toggle="modal" data-bs-target="#form">
+        <span>Add New Task</span>
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <h5 class="text-center my-3">TASK</h5>
+
+      <!-- Modal -->
+      <form
+        action=""
+        class="modal fade"
+        id="form"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                ADD NEW TASK
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Write a task</p>
+              <input class="form-control" type="text" name="" id="taskInput" />
+              <div id="msg"></div>
+              <br />
+              <p>Enter Due Date</p>
+              <input
+                class="form-control"
+                type="date"
+                name=""
+                id="dateInput"
+              /><br />
+              <p>Description</p>
+              <textarea
+                class="form-control"
+                name=""
+                id="descInput"
+                cols="30"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <div class="modal-footer">
+              <button type="submit" id="add" class="btn btn-primary">
+                ADD
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div id="tasks">
+        <div>
+          <span class="fw-bold">Task1</span>
+          <span class="small text-secondary">14.01.2023</span>
+          <p>GO TO GYM</p>
+          <span class="options">
+            <i
+              onclick="editTask(this)"
+              data-bs-toggle="modal"
+              data-bs-target="#form"
+              class="fa-regular fa-pen-to-square"
+            ></i>
+            <i onclick="deleteTask(this)" class="fa-regular fa-trash-can"></i
+          ></span>
+        </div>
+        <div>
+          <span class="fw-bold">Task2</span>
+          <span class="small text-secondary">14.01.2023</span>
+          <p>GO TO GYM</p>
+          <span class="options">
+            <i
+              onclick="editTask(this)"
+              data-bs-toggle="modal"
+              data-bs-target="#form"
+              class="fa-regular fa-pen-to-square"
+            ></i>
+            <i onclick="deleteTask(this)" class="fa-regular fa-trash-can"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</html>

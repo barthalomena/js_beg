@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Image Slider</h2>
+    <img
+      src="https://img.pigment.tokyo/c-pigment/product/935/1/450x450/a08ec1e4551bb5e1e1c7196451b0270ac6a4b87b.jpg"
+      id="m1"
+      width="500"
+      height="500"
+    />
+    <br /><br />
+    <button onclick="forward()"><span> > </span></button>
+    <button onclick="backward()"><span> < </span></button>
+
+    <script>
+      x = [
+        "https://www.poynter.org/wp-content/uploads/2020/06/shutterstock_1276276207-1500x1050.png",
+        "https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/13/3f0zkAkr-outdoors-art-uae3-1200x900.jpg",
+        "https://cdn.designbump.com/wp-content/uploads/2014/08/street-art-27.jpg",
+        "https://cdn.designbump.com/wp-content/uploads/2014/08/street-art-27.jpg",
+        "https://cdn.designbump.com/wp-content/uploads/2014/08/street-art-68.jpg",
+        "https://cdn.designbump.com/wp-content/uploads/2014/08/street-art-70.jpg",
+      ];
+
+      slide = document.getElementById("m1");
+      count = -1;
+      function forward() {
+        count = count + 1;
+        if (count <= x.length) {
+          if (count == x.length) {
+            count = 0;
+          }
+          slide.src = x[count];
+          console.log(count);
+        }
+      }
+      function backward() {
+        count = count - 1;
+        if (count <= x.length) {
+          if (count == -1 || count == -2) {
+            index = x.length - 1;
+            count = index;
+          }
+          slide.src = x[count];
+        }
+        console.log(count);
+      }
+    </script>
+  </body>
+</html>

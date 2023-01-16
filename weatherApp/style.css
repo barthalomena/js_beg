@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+  font-family: "Open Sans", sans-serif;
+  background-image: url(https://img.freepik.com/free-photo/beautiful-shot-tung-ping-chau-hong-kong-yellow-dark-blue-sky_181624-26409.jpg?size=626&ext=jpg);
+  background-size: cover;
+  font-size: 120%;
+}
+.card {
+  background: black;
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  background: #7c7c7c2b;
+  height: 46px;
+  width: 46px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 120%;
+}
+button:hover {
+  background: #7c7c7c2b;
+}
+h1.temp {
+  margin: 0;
+}
+.city {
+  color: green;
+}
+.temp {
+  color: blue;
+}
+.humidity,
+.wind,
+.desc {
+  color: rgb(127, 229, 255);
+}

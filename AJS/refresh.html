@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="b1">
+    <h2 id="h2">Refresh and Auto Refresh and redirect the web page</h2>
+    <input id="i1" placeholder="refresh" /><br /><br />
+    <button onclick="refresh()">click</button>
+    <script>
+      function refresh() {
+        //time = document.getElementById("i1").value;
+        //time = parseInt(time);
+        time = 3;
+        setTimeout("location.reload(true)", time * 1000);
+        console.log(window.location.href);
+        if (
+          setTimeout("location.assign('https://payilagam.com/')", time * 1000)
+        ) {
+          document.getElementById("h2").style.color = "crimson";
+          document.getElementById("b1").style.backgroundColor = "blue";
+        }
+      }
+      setInterval(refresh, 3000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+input {
+  width: 50%;
+  height: 40px;
+  color: red;
+  font-size: 10px;
+}
+h2 {
+  color: violet;
+}
+p {
+  color: crimson;
+  font-size: 10px;
+}
+button {
+  width: 50%;
+  height: 40px;
+  font-size: 10px;
+  background-color: rgb(175, 209, 97);
+}
+.myclass1 {
+  color: crimson;
+  background-color: rgb(240, 18, 18);
+  width: 200px;
+}
+.button1 {
+  border-radius: 50%;
+}

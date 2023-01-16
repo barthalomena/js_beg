@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Javascript date</h2>
+    <p id="p1"></p>
+      <button onclick="start()">start</button>
+      <button onclick="stop()">stop</button>
+ 
+      <script>
+        function changeColor() {
+          date = new Date();
+          hour = date.getHours();
+          minute = date.getMinutes();
+          second = date.getSeconds();
+          timing = date.toLocaleTimeString();
+
+          x = document.getElementById("p1");
+          //x.innerHTML = hour;
+          //x.innerHTML = minute;
+          //x.innerHTML = second;
+          x.innerHTML = timing;
+
+          //0,2,4,6,8--> divided by 2 remainder 0
+
+          if (second % 2 == 0) {
+            x.style.color = "crimson";
+          } else {
+            x.style.color = "blue";
+          }
+        } 
+
+        
+        function start() {
+          clear = setInterval(changeColor, 1000); //1000 milli sec
+        }
+        function stop() {
+          clearInterval(clear);
+        }
+      </script>
+    </p>
+  </body>
+</html>

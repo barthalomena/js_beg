@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>HTML element</h1>
+    <div id="mydiv"></div>
+    <input placeholder="enter data" id="myinput" /><br /><br />
+    <button onclick="create()">submit</button>
+    <script>
+      function create() {
+        value = document.getElementById("myinput").value;
+        element = document.createElement("p");
+        text = document.createTextNode(value);
+        element.appendChild(text);
+        mydiv = document.getElementById("mydiv");
+        mydiv.appendChild(element);
+      }
+    </script>
+  </body>
+</html>

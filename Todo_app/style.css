@@ -1,0 +1,63 @@
+body {
+  font-family: sans-serif;
+  background-color: #e5e5e5;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 300px;
+  height: 500px;
+  border: 5px solid violet;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+.app::-webkit-scrollbar {
+  width: 0 !important;
+}
+#newtask {
+  background-color: rgb(247, 227, 247);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.fa-plus {
+  background-color: rgb(248, 155, 248);
+  padding: 3px;
+  border-radius: 3px;
+}
+#tasks {
+  display: grid;
+  gap: 14px;
+}
+#tasks div {
+  display: grid;
+  gap: 4px;
+  background-color: rgb(247, 227, 247);
+  border: 2px solid violet;
+  border-radius: 6px;
+  padding: 5px;
+}
+.options {
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
+.options i {
+  cursor: pointer;
+}
+#msg {
+  color: red;
+}
+#success_message {
+  color: blue;
+  text-align: right;
+  padding-right: 20px;
+}

@@ -1,0 +1,77 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>select by id</h2>
+      <input placeholder="enter name" /><br /><br />
+      <input placeholder="enter city" /><br /><br />
+      <input placeholder="enter country" /><br /><br />
+
+      <button onclick="check()">send</button>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <script>
+      function check() {
+        box = document.getElementsByTagName("input");
+        data = document.getElementsByTagName("p");
+
+        data[0].innerHTML = box[0].value;
+        data[1].innerHTML = box[1].value;
+        data[2].innerHTML = box[2].value;
+        for (i = 0; i < box.length; i++) {
+          data[i].innerHTML = box[i].value;
+          console.log(i);
+        }
+      }
+    </script>
+  </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>select by id</h2>
+    <input placeholder="enter id" /> <br /><br />
+    <div id="mydiv">
+      <input placeholder="enter name" /><br /><br />
+      <input placeholder="enter city" /><br /><br />
+      <input placeholder="enter country" /><br /><br />
+
+      <button onclick="check()">send</button>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <!--<script>
+      function check() {
+        area = document.getElementById("mydiv");
+        box = area.getElementsByTagName("input");
+        data = document.getElementsByTagName("p");
+
+        //data[0].innerHTML = box[0].value;
+        //data[1].innerHTML = box[1].value;
+        //data[2].innerHTML = box[2].value;
+        for (i = 0; i < box.length; i++) {
+          data[i].innerHTML = box[i].value;
+          console.log(i);
+        }
+      } 
+    </script>-->
+  </body>
+</html>
